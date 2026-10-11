@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FrameLine — Sony Alpha ILCE-6100X Vlogging Kit (SELP1650 + SEL55210)</title>
+<meta name="description" content="Independent affiliate guide to the Sony Alpha ILCE-6100X with SELP1650 power-zoom and SEL55210 telephoto lens kit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF8; --paper2:#F1EFFA; --ink:#15151A; --muted:#67666f; --line:#E6E3EF;
+  --panel:#15151A; --panel2:#1F1F27; --rec:#F0362C; --tracking:#17B8A6; --rec-ink:#5c130f;
+  --white:#fff; --max:1180px;
+  --display:'Sora',Arial,sans-serif; --body:'Inter',Arial,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+.section{padding:92px 0}
+h1,h2,h3{font-family:var(--display);line-height:1.06;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(40px,6vw,68px);font-weight:800}
+h2{font-size:clamp(30px,4vw,48px);font-weight:700}
+h3{font-size:21px;font-weight:700}
+p{color:var(--muted);font-size:15px}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--rec-ink);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rec);flex:none}
+.eyebrow.on-dark{color:var(--tracking)}
+.eyebrow.on-dark:before{background:var(--tracking)}
+
+/* signature: viewfinder corner brackets */
+.vf-frame{position:relative}
+.vf-frame:before,.vf-frame:after,.vf-frame .c3,.vf-frame .c4{content:"";position:absolute;width:26px;height:26px;border:2.5px solid var(--ink);opacity:.85}
+.vf-frame:before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.vf-frame:after{top:-2px;right:-2px;border-left:0;border-bottom:0}
+.vf-frame .c3{bottom:-2px;left:-2px;border-right:0;border-top:0}
+.vf-frame .c4{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.vf-frame.on-dark:before,.vf-frame.on-dark:after,.vf-frame.on-dark .c3,.vf-frame.on-dark .c4{border-color:#fff;opacity:.8}
+
+.rec-dot{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.08em;color:var(--rec);text-transform:uppercase}
+.rec-dot:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rec)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;border-radius:10px;padding:16px 25px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;transition:.2s;border:1px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-rec{background:var(--rec);color:#fff}
+.btn-dark{background:var(--panel);color:var(--paper)}
+.btn-outline{border-color:#00000030;color:var(--ink)}
+.btn-outline.on-dark{border-color:#ffffff40;color:#fff}
+
+/* affiliate disclosure — sits directly beneath every CTA */
+.aff-note{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.aff-note:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--tracking);flex:none}
+.aff-note.on-dark{color:#9b9aa6}
+.cta-block{display:inline-flex;flex-direction:column;align-items:flex-start}
+
+.header{position:sticky;top:0;z-index:50;background:rgba(250,250,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-family:var(--display);font-size:20px;font-weight:800;letter-spacing:-.01em}
+.logo i{font-style:normal;color:var(--rec)}
+.navlinks{display:flex;align-items:center;gap:28px}
+.navlinks a{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.navlinks a:hover{color:var(--rec)}
+.menu-toggle{display:none;border:0;background:none;color:var(--ink);font-size:24px;cursor:pointer}
+.nav-cta-wrap{display:flex;flex-direction:column;align-items:flex-end}
+
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 0%,var(--paper2),var(--paper) 55%)}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;padding:68px 0 56px}
+.hero h1 span{color:var(--rec)}
+.hero p.lede{max-width:520px;color:var(--muted);font-size:17px;margin:22px 0 28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start}
+.hero-stats{display:flex;gap:30px;margin-top:40px;flex-wrap:wrap}
+.hero-stats strong{font-family:var(--mono);font-size:19px;display:block}
+.hero-stats span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+.hero-photo{position:relative;padding:18px;}
+.hero-photo .shot{background:#fff;border-radius:18px;box-shadow:0 34px 70px #00000014;overflow:hidden}
+.hero-photo .photo-box{aspect-ratio:1/1;width:100%;max-width:480px;max-height:480px;margin:0 auto;padding:24px;position:relative;}
+.hero-photo img{width:100%;height:100%;object-fit:contain;display:block}
+.photo-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:repeating-linear-gradient(45deg,#ECE9F7,#ECE9F7 10px,#F4F2FB 10px,#F4F2FB 20px)}
+.photo-fallback span{display:block;margin-top:6px;font-size:9px;opacity:.7;text-transform:none;letter-spacing:0}
+.shot-tag{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;font-family:var(--mono);font-size:9.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.tag-chip{position:absolute;background:var(--panel);color:#fff;border-radius:10px;padding:10px 14px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.05em;box-shadow:0 14px 30px #0003;display:flex;align-items:center;gap:7px}
+.tag1{right:-3%;top:10%}.tag2{left:-5%;bottom:16%;background:var(--tracking);color:#06302b}
+
+.intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:76px;align-items:start}
+.intro-grid p{font-size:18px;max-width:640px}
+.rule{height:1px;background:var(--line);margin-top:24px}
+
+.dark{background:var(--panel);color:#fff}
+.dark p{color:#a6a5b2}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+.feature{border:1px solid #2b2b35;background:var(--panel2);padding:25px;border-radius:16px;min-height:220px;display:flex;flex-direction:column}
+.feature .num{font-family:var(--mono);color:var(--tracking);font-size:10px;font-weight:600;letter-spacing:.1em}
+.feature h3{margin:auto 0 8px;font-size:18px;color:#fff}
+.feature p{font-size:12px}
+
+.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.kit-art{background:var(--paper2);border-radius:24px;padding:36px;position:relative;min-height:340px}
+.kit-photo{background:#fff;border-radius:16px;padding:14px;box-shadow:0 20px 40px #0000001a;width:66%}
+.kit-photo .photo-box{aspect-ratio:1/1;background:#ECE9F7;border-radius:10px;overflow:hidden;position:relative}
+.kit-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.kit-lens-photo{background:#fff;border-radius:16px;padding:10px;box-shadow:0 16px 30px #00000015;width:46%;position:absolute;right:7%;bottom:-6%}
+.kit-lens-photo .photo-box{aspect-ratio:1/1;background:#ECE9F7;border-radius:8px;overflow:hidden;position:relative}
+.kit-lens-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.rating{margin:18px 0 4px;color:#B8860B;font-size:14px}
+.score{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.mini-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:22px 0}
+.mini-spec{background:#fff;border:1px solid var(--line);padding:14px;border-radius:12px}
+.mini-spec strong{font-family:var(--mono);display:block;font-size:17px}
+.mini-spec span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.note{background:var(--paper2);border-radius:12px;padding:14px;font-size:11px;color:#5c5a68;margin-bottom:18px}
+
+.use{background:var(--paper2)}
+.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:44px}
+.use-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.use-card small{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--rec-ink)}
+.use-card h3{margin:20px 0 8px;font-size:19px}
+.use-card p{font-size:12px}
+
+.table-box{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:15px 20px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--paper2)}
+td:first-child{font-weight:600}
+td:nth-child(3){white-space:normal;color:var(--muted)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px}
+.box ul{margin:16px 0 0;padding-left:18px;color:var(--muted);font-size:13.5px;line-height:1.9}
+
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:0;padding:22px 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-weight:600;font-size:16px;cursor:pointer;color:var(--ink)}
+.plus{font-family:var(--mono);color:var(--rec);transition:.2s}
+.faq-item.active .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:.25s}
+.faq-item.active .faq-a{max-height:200px;padding-bottom:20px}
+.faq-a p{font-size:13.5px}
+
+.cta{background:var(--panel);color:#fff;text-align:left}
+.cta p{max-width:540px;margin:14px 0 0;color:#a6a5b2}
+
+footer{border-top:1px solid var(--line);padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1.4fr;gap:50px}
+.footer-title{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px}
+footer a{display:block;font-size:13px;color:var(--muted);margin-bottom:10px}
+footer a:hover{color:var(--ink)}
+.disclosure p{font-size:11.5px;color:var(--muted);margin-bottom:10px;line-height:1.7}
+.bottom{display:flex;justify-content:space-between;margin-top:50px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.mobile-bar{display:none}
+nav.drawer{position:fixed;inset:0;background:var(--panel);z-index:100;transform:translateX(100%);transition:.3s;padding:30px}
+nav.drawer.open{transform:translateX(0)}
+.drawer a{display:block;color:#fff;font-family:var(--display);font-size:24px;font-weight:700;padding:14px 0;border-bottom:1px solid #2b2b35}
+.drawer-close{background:none;border:0;color:#fff;font-size:28px;float:right;cursor:pointer}
+
+@media(max-width:980px){
+  .navlinks{display:none}.menu-toggle{display:block}.nav-cta-wrap{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .kit-grid{grid-template-columns:1fr}
+  .intro-grid{grid-template-columns:1fr;gap:26px}
+  .use-grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr;gap:20px}
+  .footer-grid{grid-template-columns:1fr;gap:34px}
+  .mobile-bar{display:block;position:fixed;bottom:0;left:0;right:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:12px 0;box-shadow:0 -10px 30px #0000000f}
+  .mobile-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .mobile-bar-copy strong{display:block;font-size:13px}
+  .mobile-bar-copy span{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  body{padding-bottom:78px}
+}
+@media(max-width:560px){
+  .feature-grid{grid-template-columns:1fr}
+  .use-grid{grid-template-columns:1fr}
+  .hero-stats{gap:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="header"><div class="container navbar">
+  <a class="logo" href="#top">FRAME<i>LINE</i></a>
+  <nav class="navlinks">
+    <a href="#features">Highlights</a><a href="#kit">The kit</a><a href="#specs">Specs</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-cta-wrap">
+    
+    
+  </div>
+  <button class="menu-toggle" id="openMenu" aria-label="Open menu">☰</button>
+</div></header>
+
+<nav class="drawer" id="nav">
+  <button class="drawer-close" id="closeMenu" style="display:block" aria-label="Close menu">×</button>
+  <div style="clear:both;padding-top:30px">
+    <a href="#features">Highlights</a><a href="#kit">The kit</a><a href="#specs">Specs</a><a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero"><div class="container hero-grid">
+  <div class="hero-copy">
+    <div class="rec-dot" style="margin-bottom:18px">Live · Sony E-Mount Vlogging Kit</div>
+    <h1>Track the shot.<br>Never <span>lose focus.</span></h1>
+    <p class="lede">The Sony Alpha ILCE-6100X pairs a 24.2MP APS-C sensor with Real-time Eye AF and Real-time Tracking, bundled with the SELP1650 power-zoom and SEL55210 telephoto — one kit that covers everyday vlogging and reach shots alike.</p>
+    <div class="hero-actions">
+      <div class="cta-block">
+        <a class="btn btn-rec" href="https://link.amazon/B023W9pFh" target="_blank" rel="nofollow sponsored noopener">Check price on Amazon →</a>
+        <div class="aff-note">Affiliate link — commission earned, no extra cost to you</div>
+      </div>
+      <a class="btn btn-outline" href="#specs">See full specs</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>0.02s</strong><span>AF acquisition</span></div>
+      <div><strong>11 fps</strong><span>Continuous shooting</span></div>
+      <div><strong>425pt</strong><span>Phase-detect AF</span></div>
+      <div><strong>2 lenses</strong><span>16-50mm + 55-210mm</span></div>
+    </div>
+  </div>
+  <div class="hero-photo vf-frame">
+    <span class="c3"></span><span class="c4"></span>
+    <div class="shot">
+      <div class="photo-box">
+        <img src="images/hero1.png" alt="Sony Alpha ILCE-6100X with SELP1650 and SEL55210 lens kit" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="photo-fallback" style="display:none">Add your product image here<span>images/sony-6100x-hero.jpg</span></div>
+      </div>
+      <div class="shot-tag"><span>FIG. 01 — ILCE-6100X KIT</span><span>APS-C · E-MOUNT</span></div>
+    </div>
+    <div class="tag-chip tag1">● Real-time Eye AF</div>
+    <div class="tag-chip tag2">11 FPS Burst</div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container intro-grid">
+  <div>
+    <div class="eyebrow">Overview</div>
+    <h2>Built to keep up with whatever moves.</h2>
+  </div>
+  <div>
+    <p>Sony built the 6100-series around one problem: keeping focus on a subject that won't sit still. This kit pairs that AI-driven tracking with two lenses — a compact power-zoom for everyday and vlog work, and a 55-210mm reach lens for subjects further out — so you're not shopping for glass separately on day one.</p>
+    <div class="rule"></div>
+  </div>
+</div></section>
+
+<section class="section dark" id="features"><div class="container">
+  <div class="eyebrow on-dark">Highlights</div>
+  <h2>Four things that do the heavy lifting.</h2>
+  <div class="feature-grid">
+    <article class="feature"><div class="num">01 / FOCUS</div><h3>Real-time Eye AF</h3><p>Tracks human and animal eyes automatically, including left/right eye priority for portraits in motion.</p></article>
+    <article class="feature"><div class="num">02 / SPEED</div><h3>0.02s AF acquisition</h3><p>425 phase-detection points working with contrast-detection AF for near-instant focus lock.</p></article>
+    <article class="feature"><div class="num">03 / BURST</div><h3>11fps continuous</h3><p>Fire off full-resolution bursts with AF/AE tracking, plus a silent shooting mode for quieter settings.</p></article>
+    <article class="feature"><div class="num">04 / SCREEN</div><h3>180° tiltable LCD</h3><p>Flips forward for framing yourself — a straightforward setup for solo vlogging and talking-head clips.</p></article>
+  </div>
+</div></section>
+
+<section class="section" id="kit"><div class="container kit-grid">
+  <div class="kit-art vf-frame">
+    <span class="c3"></span><span class="c4"></span>
+    <div class="kit-photo">
+      <div class="photo-box">
+        <img src="images/s2.png" alt="Sony Alpha ILCE-6100X camera body" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="photo-fallback" style="display:none;position:absolute;inset:0">Camera body photo<span>images/sony-6100x-body.jpg</span></div>
+      </div>
+    </div>
+    <div class="kit-lens-photo">
+      <div class="photo-box">
+        <img src="images/s3.png" alt="SELP1650 and SEL55210 lenses" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="photo-fallback" style="display:none;position:absolute;inset:0;font-size:9px">Lens kit photo<span>images/sony-6100x-lenses.jpg</span></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="eyebrow">The kit</div>
+    <h2>Two lenses, one box.</h2>
+    <div class="score">★★★★☆ &nbsp; Well-rated for a dual-lens vlogging bundle</div>
+    <div class="mini-specs">
+      <div class="mini-spec"><strong>24.2MP</strong><span>APS-C Exmor sensor</span></div>
+      <div class="mini-spec"><strong>16-50mm</strong><span>SELP1650 power zoom</span></div>
+      <div class="mini-spec"><strong>55-210mm</strong><span>SEL55210 telephoto</span></div>
+    </div>
+    <div class="note">Listings and bundle contents can change — confirm you're viewing the SELP1650 + SEL55210 twin-lens kit before buying.</div>
+    <div class="cta-block">
+      <a class="btn btn-dark" href="https://link.amazon/B023W9pFh" target="_blank" rel="nofollow sponsored noopener">Check current price →</a>
+      <div class="aff-note">Affiliate link — commission earned, no extra cost to you</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section use"><div class="container">
+  <div class="eyebrow">Use it for</div>
+  <h2>One camera, four kinds of footage.</h2>
+  <div class="use-grid">
+    <article class="use-card"><small>01 / VLOGGING</small><h3>Talk to the lens</h3><p>Tiltable screen plus face-priority AF makes solo, handheld pieces to camera easy to frame.</p></article>
+    <article class="use-card"><small>02 / TRAVEL</small><h3>Pack both ends</h3><p>Power-zoom for everyday scenes, telephoto in the bag for the shots further away.</p></article>
+    <article class="use-card"><small>03 / PETS & WILDLIFE</small><h3>Stays locked on</h3><p>Animal Eye AF and Real-time Tracking help with subjects that won't hold still or pose.</p></article>
+    <article class="use-card"><small>04 / SOCIAL CONTENT</small><h3>Shoot, export, post</h3><p>4K XAVC S recording gives clips enough quality headroom for cropping and reframing later.</p></article>
+  </div>
+</div></section>
+
+<section class="section" id="specs"><div class="container">
+  <div class="eyebrow">Technical overview</div>
+  <h2>The numbers.</h2>
+  <div class="table-box"><table>
+    <thead><tr><th>Specification</th><th>ILCE-6100X kit</th><th>Practical meaning</th></tr></thead>
+    <tbody>
+      <tr><td>Mount</td><td>Sony E</td><td>Compatible with the full Sony E-mount lens lineup</td></tr>
+      <tr><td>Sensor</td><td>APS-C Exmor CMOS, 24.2MP</td><td>Cropped-frame sensor for strong detail and low-light handling</td></tr>
+      <tr><td>Autofocus</td><td>Hybrid AF, 425+425 points</td><td>Phase- and contrast-detection working together</td></tr>
+      <tr><td>AF acquisition</td><td>0.02 sec</td><td>Near-instant focus lock in good light</td></tr>
+      <tr><td>Eye / tracking AF</td><td>Real-time Eye AF (human + animal), Real-time Tracking</td><td>AI-based subject detection that follows movement</td></tr>
+      <tr><td>Continuous shooting</td><td>Up to 11 fps (AF/AE)</td><td>Enough for casual sports, pets and action</td></tr>
+      <tr><td>Video</td><td>4K XAVC S, Full HD</td><td>4K suitable for reframing and cropping in edit</td></tr>
+      <tr><td>Rear screen</td><td>180° tiltable LCD</td><td>Flips forward for self-recording and vlogging</td></tr>
+      <tr><td>Kit lenses</td><td>SELP1650 (16-50mm) + SEL55210 (55-210mm)</td><td>Everyday power-zoom plus telephoto reach</td></tr>
+      <tr><td>Weight</td><td>Approx. 396g (body)</td><td>Light enough for all-day handheld carry</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="section"><div class="container">
+  <div class="eyebrow">Buying perspective</div>
+  <h2>What works — and what to think about.</h2>
+  <div class="split">
+    <div class="box"><h3>Why consider it</h3><ul>
+      <li>Two lenses in one box covers wide-to-tele without separate purchases</li>
+      <li>Real-time Eye AF makes focus feel nearly automatic for people and pets</li>
+      <li>0.02s AF and 11fps burst handle fast, unpredictable subjects</li>
+      <li>Tiltable screen suits solo vlogging without extra rigging</li>
+      <li>Compact, light body for all-day or travel carry</li>
+    </ul></div>
+    <div class="box"><h3>Before you buy</h3><ul>
+      <li>Variable-aperture kit lenses are slower in low light than fixed-aperture glass</li>
+      <li>Confirm you're buying the twin-lens kit and not a body-only or single-lens listing</li>
+      <li>4K video specifics (crop, bit-rate) are worth checking against your editing needs</li>
+      <li>SELP1650 is a power-zoom — zoom speed differs from a manual ring</li>
+      <li>Check today's price, seller and warranty terms on the listing</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="section" id="faq"><div class="container faq-grid">
+  <div><div class="eyebrow">FAQ</div><h2>Before you buy.</h2><p>Quick answers for the most common questions about this kit.</p></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q">Does this kit include both lenses?<span class="plus">+</span></button><div class="faq-a"><p>Yes — this listing bundles the SELP1650 power-zoom and SEL55210 telephoto with the ILCE-6100X body. Always confirm the exact bundle on the listing before ordering.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Is it good for vlogging solo?<span class="plus">+</span></button><div class="faq-a"><p>The 180° tiltable screen and face/eye-priority AF make it straightforward to frame and stay in focus without a second person behind the camera.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Can it track pets and wildlife?<span class="plus">+</span></button><div class="faq-a"><p>Yes, via Animal Eye AF and Real-time Tracking — useful with the SEL55210's extra reach for subjects that keep their distance.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What video format does it shoot?<span class="plus">+</span></button><div class="faq-a"><p>4K in the XAVC S format, plus Full HD. Check the listing for current crop-factor and clip-length details.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where do I check today's price?<span class="plus">+</span></button><div class="faq-a"><p>Use any Amazon button on this page to open the live listing for current price, seller and stock.</p></div></div>
+  </div>
+</div></section>
+
+<section class="section cta"><div class="container">
+  <div class="eyebrow on-dark">Next step</div>
+  <h2>Check today's price and confirm the bundle.</h2>
+  <p>Open the listing to verify the current kit contents, price and seller before you buy.</p>
+  <div class="cta-block" style="margin-top:28px">
+    <a class="btn btn-rec" href="https://link.amazon/B023W9pFh" target="_blank" rel="nofollow sponsored noopener">Open Amazon listing →</a>
+    <div class="aff-note on-dark">Affiliate link — commission earned, no extra cost to you</div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="container">
+  <div class="footer-grid">
+    <div><div class="logo">FRAME<i>LINE</i></div><p style="margin-top:12px">Independent camera-gear content designed for easier buying decisions.</p></div>
+    <div><div class="footer-title">Navigation</div><a href="#features">Highlights</a><a href="#kit">The kit</a><a href="#specs">Specifications</a><a href="#faq">FAQ</a></div>
+    <div class="disclosure">
+      <div class="footer-title">Affiliate disclosure</div>
+      <p>This website contains affiliate links. As an Amazon Associate, I earn from qualifying purchases. If you click an Amazon link and make a qualifying purchase, I may earn a commission at no additional cost to you.</p>
+      <p>Prices, availability and bundle contents may change. Please verify current details on the retailer's listing before purchasing.</p>
+      <p>This page is independently operated and is not affiliated with or endorsed by Amazon or Sony.</p>
+    </div>
+  </div>
+  <div class="bottom"><span>© <span id="year"></span> FrameLine</span><span>Camera gear editorial</span></div>
+</div></footer>
+
+<div class="mobile-bar"><div class="container mobile-bar-inner">
+  <div class="mobile-bar-copy"><strong>Sony ILCE-6100X kit</strong><span>Affiliate link · check Amazon price</span></div>
+  <a class="btn btn-rec" href="https://link.amazon/B023W9pFh" target="_blank" rel="nofollow sponsored noopener">View →</a>
+</div></div>
+
+<script>
+const nav=document.getElementById('nav');
+document.getElementById('openMenu').onclick=()=>{nav.classList.add('open');document.body.style.overflow='hidden'};
+function closeNav(){nav.classList.remove('open');document.body.style.overflow=''}
+document.getElementById('closeMenu').onclick=closeNav;
+nav.querySelectorAll('a').forEach(a=>a.onclick=closeNav);
+document.addEventListener('keydown',e=>e.key==='Escape'&&closeNav());
+document.querySelectorAll('.faq-q').forEach(q=>q.onclick=()=>{let i=q.parentElement;document.querySelectorAll('.faq-item').forEach(x=>x!==i&&x.classList.remove('active'));i.classList.toggle('active')});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
